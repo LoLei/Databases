@@ -1,4 +1,4 @@
-INSERT INTO `mydb`.`locations` (`country`, `city`, `street`, `number`) VALUES ('USA', 'Bellevue', 'Northeast', '4');
+INSERT INTO `mydb`.`locations` (`country`, `city`, `street`, `number`) VALUES ('USA', 'Bellevue', 'Northeast Street', '4');
 
 INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('1', 'Newell', 'Gabe', '23', 'CEO', 'USA', 'Bellevue', 'Northeast Street', '4', '1');
 INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('2', 'Walker', 'Robin', '23', 'TF2 Inventor', 'USA', 'Bellevue', 'Northeast Street', '4', '1');
