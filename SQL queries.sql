@@ -10,3 +10,36 @@ INSERT INTO `mydb`.`locations` (`country`, `city`, `street`, `number`) VALUES ('
 INSERT INTO `mydb`.`locations` (`country`, `city`, `street`, `number`) VALUES ('USA', 'Springfield', 'Fakestreet', '123');
 INSERT INTO `mydb`.`locations` (`country`, `city`, `street`, `number`) VALUES ('USA', 'Silicon Valley', 'Mountain View', '3');
 INSERT INTO `mydb`.`locations` (`country`, `city`, `street`, `number`) VALUES ('Westeros', 'Winterfell', 'Main Road ', '1');
+
+# Lo vehicles
+INSERT INTO `mydb`.`vehicles` (`id`, `type`, `brand`, `model`, `date_of_purchase`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('1', 'Limousine', 'BMW', '5 2014', '2014-05-30', 'Germany', 'Berlin', 'Hauptstrasse', '1');
+INSERT INTO `mydb`.`vehicles` (`id`, `type`, `brand`, `model`, `date_of_purchase`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('2', 'Truck', 'Dodge', 'Ram 2010', '2011-04-12', 'USA', 'Bellevue', 'Northeast Street', '4');
+INSERT INTO `mydb`.`vehicles` (`id`, `type`, `brand`, `model`, `date_of_purchase`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('3', 'Bus', 'VW', 'Multivan 2013', '2013-01-14', 'Germany', 'Berlin', 'Hauptstrasse', '1');
+
+# Stefan employees
+
+INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('5', 'Musterman', 'Max', '37', 'Developer', 'USA', 'Bellevue', 'Northeast Street', '4', '2');
+INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('6', 'Rogrammer', 'Peter', '27', 'Graphic Designer', 'USA', 'Bellevue', 'Northeast Street', '4', '2');
+INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('7', 'Dude', 'Guy', '52', 'Developer', 'USA', 'Bellevue', 'Northeast Street', '4', '2');
+INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('8', 'Balmer', 'Steve', '48', 'Developer', 'USA', 'Bellevue', 'Northeast Street', '4', '2');
+INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('9', 'Jobs', 'Steve', '42', 'Engineer', 'USA', 'Bellevue', 'Northeast Street', '4', '2');
+
+INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('10', 'Burns', 'Montgomery', '122', 'Manager', 'USA', 'Springfield', 'Fakestreet', '123', '1');
+INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('11', 'Simpson', 'Homer', '38', 'Safety Inspector', 'USA', 'Springfield', 'Fakestreet', '123', '10');
+INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('12', 'Simpson', 'Marge', '36', 'House Wife', 'USA', 'Springfield', 'Fakestreet', '123', '10');
+
+INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('13', 'Jörg', 'Hans', '45', 'Manager', 'Germany', 'Berlin', 'Hauptstrasse', '1', '1');
+INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('14', 'Musterfrau', 'Anita', '32', 'Developer', 'Germany', 'Berlin', 'Hauptstrasse', '1', '13');
+
+# Jul Products & Software
+INSERT INTO `mydb`.`products` (`id`, `name`, `type`, `value`, `selling_price`) VALUES ('1', 'Database Management Suite', 'Software', '200', '300');
+INSERT INTO `mydb`.`products` (`id`, `name`, `type`, `value`, `selling_price`) VALUES ('2', 'Database Control Center', 'Software', '75', '95');
+INSERT INTO `mydb`.`products` (`id`, `name`, `type`, `value`, `selling_price`) VALUES ('3', 'Database Editor', 'Software', '65', '75');
+INSERT INTO `mydb`.`products` (`id`, `name`, `type`, `value`, `selling_price`) VALUES ('4', 'Database Cloud Management', 'Software', '50', '60');
+INSERT INTO `mydb`.`products` (`id`, `name`, `type`, `value`, `selling_price`) VALUES ('5', 'Database Helpdesk', 'Software', '25', '30');
+
+
+INSERT INTO `mydb`.`software` (`id`, `type`, `distributor`, `name`, `license_expiration`) VALUES ('1', 'IDE', 'Microsoft', 'Visual Studio Ultimate', '2016-05-06');
+INSERT INTO `mydb`.`software` (`id`, `type`, `distributor`, `name`, `license_expiration`) VALUES ('2', 'Editor', 'Sublime', 'Sublime Text', '2016-12-31');
+INSERT INTO `mydb`.`software` (`id`, `type`, `distributor`, `name`, `license_expiration`) VALUES ('3', 'Database Management', 'MySQL', 'MySQL Enterprise Edition', '2016-08-31');
+INSERT INTO `mydb`.`software` (`id`, `type`, `distributor`, `name`, `license_expiration`) VALUES ('4', 'Image Editing', 'Adobe', 'Creative Cloud', '2015-05-31');
