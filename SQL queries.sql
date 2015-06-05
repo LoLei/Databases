@@ -55,3 +55,10 @@ INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees
 INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('9', 'Baratheon', 'Stannis', '42', '12');
 INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('10', 'Tyrell', 'Loras', '26', '1');
 
+INSERT INTO `mydb`.`sales` (`id`, `date`, `price`, `employees_id`, `clients_id`) VALUES ('1', '2002-07-20', '20', '2', '6');
+INSERT INTO `mydb`.`sales` (`id`, `date`, `price`, `employees_id`, `clients_id`) VALUES ('2', '2009-03-20', '43500', '7', '1');
+INSERT INTO `mydb`.`sales` (`id`, `date`, `price`, `employees_id`, `clients_id`) VALUES ('3', '2014-12-20', '76500', '5', '5');
+INSERT INTO `mydb`.`sales` (`id`, `date`, `price`, `employees_id`, `clients_id`) VALUES ('4', '2003-01-20', '8034', '8', '6');
+INSERT INTO `mydb`.`sales` (`id`, `date`, `price`, `employees_id`, `clients_id`) VALUES ('5', '2009-05-20', '3456', '1', '9');
+INSERT INTO `mydb`.`sales` (`id`, `date`, `price`, `employees_id`, `clients_id`) VALUES ('6', '2007-09-20', '23678', '2', '10');
+INSERT INTO `mydb`.`sales` (`id`, `date`, `price`, `employees_id`, `clients_id`) VALUES ('7', '2007-06-20', '41768', '3', '8');
