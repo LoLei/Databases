@@ -86,3 +86,11 @@ INSERT INTO `mydb`.`devices` (`id`, `type`, `brand`, `date_of_purchase`, `locati
 INSERT INTO `mydb`.`devices` (`id`, `type`, `brand`, `date_of_purchase`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('6', 'Laptop', 'Sony', '2012-02-07', 'Westeros', 'Winterfell', 'Main Road', '1');
 INSERT INTO `mydb`.`devices` (`id`, `type`, `brand`, `date_of_purchase`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('7', 'PC', 'MacBook', '2014-01-02', 'USA', 'Bellevue', 'Northeast Street', '4');
 
+INSERT INTO `mydb`.`employee_used_vehicles` (`employees_id`, `vehicles_id`, `date_used`) VALUES ('2', '2', '2012-03-04');
+INSERT INTO `mydb`.`employee_used_vehicles` (`employees_id`, `vehicles_id`, `date_used`) VALUES ('5', '1', '2014-06-01');
+INSERT INTO `mydb`.`employee_used_vehicles` (`employees_id`, `vehicles_id`, `date_used`) VALUES ('2', '3', '2014-02-05');
+INSERT INTO `mydb`.`employee_used_vehicles` (`employees_id`, `vehicles_id`, `date_used`) VALUES ('3', '1', '2011-05-23');
+INSERT INTO `mydb`.`employee_used_vehicles` (`employees_id`, `vehicles_id`, `date_used`) VALUES ('14', '3', '2013-09-12');
+INSERT INTO `mydb`.`employee_used_vehicles` (`employees_id`, `vehicles_id`, `date_used`) VALUES ('10', '2', '2012-02-16');
+INSERT INTO `mydb`.`employee_used_vehicles` (`employees_id`, `vehicles_id`, `date_used`) VALUES ('8', '2', '2013-07-19');
+INSERT INTO `mydb`.`employee_used_vehicles` (`employees_id`, `vehicles_id`, `date_used`) VALUES ('9', '1', '2014-10-24');
