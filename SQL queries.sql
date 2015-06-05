@@ -43,3 +43,15 @@ INSERT INTO `mydb`.`software` (`id`, `type`, `distributor`, `name`, `license_exp
 INSERT INTO `mydb`.`software` (`id`, `type`, `distributor`, `name`, `license_expiration`) VALUES ('2', 'Editor', 'Sublime', 'Sublime Text', '2016-12-31');
 INSERT INTO `mydb`.`software` (`id`, `type`, `distributor`, `name`, `license_expiration`) VALUES ('3', 'Database Management', 'MySQL', 'MySQL Enterprise Edition', '2016-08-31');
 INSERT INTO `mydb`.`software` (`id`, `type`, `distributor`, `name`, `license_expiration`) VALUES ('4', 'Image Editing', 'Adobe', 'Creative Cloud', '2015-05-31');
+
+INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('1', 'Lannister', 'Tyrion', '28', '3');
+INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('2', 'Stark', 'Arya', '12', '6');
+INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('3', 'Snow', 'Jon', '20', '12');
+INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('4', 'Tarth', 'Brianne', '26', '8');
+INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('5', 'Lannister', 'Cersei', '34', '1');
+INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('6', 'NoName', 'Mellisandre', '33', '10');
+INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('7', 'Tarly', 'Sam', '22', '9');
+INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('8', 'Bolton', 'Ramsay', '25', '14');
+INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('9', 'Baratheon', 'Stannis', '42', '12');
+INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('10', 'Tyrell', 'Loras', '26', '1');
+
