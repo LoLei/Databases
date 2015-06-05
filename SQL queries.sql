@@ -71,3 +71,10 @@ INSERT INTO `mydb`.`sale_has_products` (`sales_id`, `products_id`, `number_of_pr
 INSERT INTO `mydb`.`sale_has_products` (`sales_id`, `products_id`, `number_of_product`) VALUES ('6', '1', '3');
 INSERT INTO `mydb`.`sale_has_products` (`sales_id`, `products_id`, `number_of_product`) VALUES ('7', '5', '2');
 
+INSERT INTO `mydb`.`sold_at` (`products_id`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('2', 'Austria', 'Graz', 'Inffeldgasse', '16');
+INSERT INTO `mydb`.`sold_at` (`products_id`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('5', 'Germany', 'Berlin', 'Hauptstrasse', '1');
+INSERT INTO `mydb`.`sold_at` (`products_id`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('3', 'Westeros', 'Winterfell', 'Main Road', '1');
+INSERT INTO `mydb`.`sold_at` (`products_id`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('2', 'Germany', 'Berlin', 'Hauptstrasse', '1');
+INSERT INTO `mydb`.`sold_at` (`products_id`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('4', 'USA', 'Springfield', 'Fakestreet', '123');
+INSERT INTO `mydb`.`sold_at` (`products_id`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('1', 'Westeros', 'Winterfell', 'Main Road', '1');
+
