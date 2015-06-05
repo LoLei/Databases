@@ -17,7 +17,6 @@ INSERT INTO `mydb`.`vehicles` (`id`, `type`, `brand`, `model`, `date_of_purchase
 INSERT INTO `mydb`.`vehicles` (`id`, `type`, `brand`, `model`, `date_of_purchase`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('3', 'Bus', 'VW', 'Multivan 2013', '2013-01-14', 'Germany', 'Berlin', 'Hauptstrasse', '1');
 
 # Stefan employees
-
 INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('5', 'Musterman', 'Max', '37', 'Developer', 'USA', 'Bellevue', 'Northeast Street', '4', '2');
 INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('6', 'Rogrammer', 'Peter', '27', 'Graphic Designer', 'USA', 'Bellevue', 'Northeast Street', '4', '2');
 INSERT INTO `mydb`.`employees` (`id`, `last_name`, `first_name`, `age`, `position`, `locations_country`, `locations_city`, `locations_street`, `locations_number`, `employees_id`) VALUES ('7', 'Dude', 'Guy', '52', 'Developer', 'USA', 'Bellevue', 'Northeast Street', '4', '2');
@@ -44,6 +43,7 @@ INSERT INTO `mydb`.`software` (`id`, `type`, `distributor`, `name`, `license_exp
 INSERT INTO `mydb`.`software` (`id`, `type`, `distributor`, `name`, `license_expiration`) VALUES ('3', 'Database Management', 'MySQL', 'MySQL Enterprise Edition', '2016-08-31');
 INSERT INTO `mydb`.`software` (`id`, `type`, `distributor`, `name`, `license_expiration`) VALUES ('4', 'Image Editing', 'Adobe', 'Creative Cloud', '2015-05-31');
 
+# Verry
 INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('1', 'Lannister', 'Tyrion', '28', '3');
 INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('2', 'Stark', 'Arya', '12', '6');
 INSERT INTO `mydb`.`clients` (`id`, `last_name`, `first_name`, `age`, `employees_id`) VALUES ('3', 'Snow', 'Jon', '20', '12');
