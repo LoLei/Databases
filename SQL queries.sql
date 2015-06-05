@@ -62,3 +62,12 @@ INSERT INTO `mydb`.`sales` (`id`, `date`, `price`, `employees_id`, `clients_id`)
 INSERT INTO `mydb`.`sales` (`id`, `date`, `price`, `employees_id`, `clients_id`) VALUES ('5', '2009-05-20', '3456', '1', '9');
 INSERT INTO `mydb`.`sales` (`id`, `date`, `price`, `employees_id`, `clients_id`) VALUES ('6', '2007-09-20', '23678', '2', '10');
 INSERT INTO `mydb`.`sales` (`id`, `date`, `price`, `employees_id`, `clients_id`) VALUES ('7', '2007-06-20', '41768', '3', '8');
+
+INSERT INTO `mydb`.`sale_has_products` (`sales_id`, `products_id`, `number_of_product`) VALUES ('1', '2', '5');
+INSERT INTO `mydb`.`sale_has_products` (`sales_id`, `products_id`, `number_of_product`) VALUES ('2', '4', '1');
+INSERT INTO `mydb`.`sale_has_products` (`sales_id`, `products_id`, `number_of_product`) VALUES ('3', '1', '2');
+INSERT INTO `mydb`.`sale_has_products` (`sales_id`, `products_id`, `number_of_product`) VALUES ('4', '5', '4');
+INSERT INTO `mydb`.`sale_has_products` (`sales_id`, `products_id`, `number_of_product`) VALUES ('5', '2', '4');
+INSERT INTO `mydb`.`sale_has_products` (`sales_id`, `products_id`, `number_of_product`) VALUES ('6', '1', '3');
+INSERT INTO `mydb`.`sale_has_products` (`sales_id`, `products_id`, `number_of_product`) VALUES ('7', '5', '2');
+
