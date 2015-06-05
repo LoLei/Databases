@@ -78,3 +78,11 @@ INSERT INTO `mydb`.`sold_at` (`products_id`, `locations_country`, `locations_cit
 INSERT INTO `mydb`.`sold_at` (`products_id`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('4', 'USA', 'Springfield', 'Fakestreet', '123');
 INSERT INTO `mydb`.`sold_at` (`products_id`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('1', 'Westeros', 'Winterfell', 'Main Road', '1');
 
+INSERT INTO `mydb`.`devices` (`id`, `type`, `brand`, `date_of_purchase`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('1', 'Laptop', 'HP', '2014-07-24', 'Austria', 'Graz', 'Inffeldgasse', '16');
+INSERT INTO `mydb`.`devices` (`id`, `type`, `brand`, `date_of_purchase`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('2', 'Smartphone', 'HTC', '2012-09-01', 'USA', 'Silicon Valley', 'Mountain View', '3');
+INSERT INTO `mydb`.`devices` (`id`, `type`, `brand`, `date_of_purchase`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('3', 'PC', 'Dell', '2000-10-12', 'Westeros', 'Winterfell', 'Main Road', '1');
+INSERT INTO `mydb`.`devices` (`id`, `type`, `brand`, `date_of_purchase`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('4', 'PC', 'Fujitsu', '2013-03-05', 'Germany', 'Berlin', 'Hauptstrasse', '1');
+INSERT INTO `mydb`.`devices` (`id`, `type`, `brand`, `date_of_purchase`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('5', 'Smartphone', 'Samsung', '2015-01-01', 'Austria', 'Graz', 'Inffeldgasse', '16');
+INSERT INTO `mydb`.`devices` (`id`, `type`, `brand`, `date_of_purchase`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('6', 'Laptop', 'Sony', '2012-02-07', 'Westeros', 'Winterfell', 'Main Road', '1');
+INSERT INTO `mydb`.`devices` (`id`, `type`, `brand`, `date_of_purchase`, `locations_country`, `locations_city`, `locations_street`, `locations_number`) VALUES ('7', 'PC', 'MacBook', '2014-01-02', 'USA', 'Bellevue', 'Northeast Street', '4');
+
