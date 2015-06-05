@@ -94,3 +94,11 @@ INSERT INTO `mydb`.`employee_used_vehicles` (`employees_id`, `vehicles_id`, `dat
 INSERT INTO `mydb`.`employee_used_vehicles` (`employees_id`, `vehicles_id`, `date_used`) VALUES ('10', '2', '2012-02-16');
 INSERT INTO `mydb`.`employee_used_vehicles` (`employees_id`, `vehicles_id`, `date_used`) VALUES ('8', '2', '2013-07-19');
 INSERT INTO `mydb`.`employee_used_vehicles` (`employees_id`, `vehicles_id`, `date_used`) VALUES ('9', '1', '2014-10-24');
+
+INSERT INTO `mydb`.`employee_uses_devices` (`devices_id`, `employees_id`) VALUES ('1', '5');
+INSERT INTO `mydb`.`employee_uses_devices` (`devices_id`, `employees_id`) VALUES ('2', '3');
+INSERT INTO `mydb`.`employee_uses_devices` (`devices_id`, `employees_id`) VALUES ('1', '6');
+INSERT INTO `mydb`.`employee_uses_devices` (`devices_id`, `employees_id`) VALUES ('2', '7');
+INSERT INTO `mydb`.`employee_uses_devices` (`devices_id`, `employees_id`) VALUES ('4', '2');
+INSERT INTO `mydb`.`employee_uses_devices` (`devices_id`, `employees_id`) VALUES ('5', '7');
+INSERT INTO `mydb`.`employee_uses_devices` (`devices_id`, `employees_id`) VALUES ('6', '8');
