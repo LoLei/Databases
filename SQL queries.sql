@@ -102,3 +102,12 @@ INSERT INTO `mydb`.`employee_uses_devices` (`devices_id`, `employees_id`) VALUES
 INSERT INTO `mydb`.`employee_uses_devices` (`devices_id`, `employees_id`) VALUES ('4', '2');
 INSERT INTO `mydb`.`employee_uses_devices` (`devices_id`, `employees_id`) VALUES ('5', '7');
 INSERT INTO `mydb`.`employee_uses_devices` (`devices_id`, `employees_id`) VALUES ('6', '8');
+
+INSERT INTO `mydb`.`employee_uses_software` (`employees_id`, `software_id`) VALUES ('2', '1');
+INSERT INTO `mydb`.`employee_uses_software` (`employees_id`, `software_id`) VALUES ('2', '3');
+INSERT INTO `mydb`.`employee_uses_software` (`employees_id`, `software_id`) VALUES ('4', '4');
+INSERT INTO `mydb`.`employee_uses_software` (`employees_id`, `software_id`) VALUES ('3', '2');
+INSERT INTO `mydb`.`employee_uses_software` (`employees_id`, `software_id`) VALUES ('1', '3');
+INSERT INTO `mydb`.`employee_uses_software` (`employees_id`, `software_id`) VALUES ('1', '2');
+INSERT INTO `mydb`.`employee_uses_software` (`employees_id`, `software_id`) VALUES ('4', '2');
+INSERT INTO `mydb`.`employee_uses_software` (`employees_id`, `software_id`) VALUES ('10', '2');
