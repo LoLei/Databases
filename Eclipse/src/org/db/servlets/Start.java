@@ -107,7 +107,36 @@ public class Start extends HttpServlet {
 		writer.println("Brand name: <input type='text' name='vbrand'/>");
 		writer.println("<input type='submit' value='Submit'/>");
 		writer.println("</form>");
+		
+		// Get names of clients who bought a total x or more and who are y years or younger
+		writer.println("<form method='get' action='/DB2/GetClientName'>");
+		writer.println("<h1>Get names of clients who bought a total x or more and who are y years or younger</h1>");
+		writer.println("Price: <input type='text' name='cprice'/>");
+		writer.println("Age: <input type='text' name='cage'/>");
+		writer.println("<input type='submit' value='Submit'/>");
+		writer.println("</form>");
 				
+		// Get location where employees with position x are located
+		writer.println("<form method='get' action='/DB2/GetLocation'>");
+		writer.println("<h1>Get all locations where employees with position x are located</h1>");
+		writer.println("Position: <input type='text' name='lposition'/>");
+		writer.println("<input type='submit' value='Submit'/>");
+		writer.println("</form>");
+		
+		// Get products which were sold after x
+		writer.println("<form method='get' action='/DB2/GetProducts'>");
+		writer.println("<h1>Get all products which were sold after x</h1>");
+		writer.println("Date: <input type='text' name='pdate'/>");
+		writer.println("<input type='submit' value='Submit'/>");
+		writer.println("</form>");
+		
+		// Get employees who used the device from brand x and type y
+		writer.println("<form method='get' action='/DB2/GetEmployees3'>");
+		writer.println("<h1>Get employees who used the device from brand x and type y</h1>");
+		writer.println("Brand: <input type='text' name='ebrand'/>");
+		writer.println("Type: <input type='text' name='etype'/>");
+		writer.println("<input type='submit' value='Submit'/>");
+		writer.println("</form>");
 		
 		writer.println("<body>");
 		writer.println("</html>");
