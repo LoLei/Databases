@@ -16,14 +16,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Start
  */
-@WebServlet("/InsertLocation")
-public class InsertLocation extends HttpServlet {
+@WebServlet("/InsertProduct")
+public class InsertProducts extends HttpServlet {
   private static final long serialVersionUID = 1L;
 
   /**
    * @see HttpServlet#HttpServlet()
    */
-  public InsertLocation() {
+  public InsertProducts() {
     super();
     // TODO Auto-generated constructor stub
   }
@@ -35,42 +35,53 @@ public class InsertLocation extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       PrintWriter writer = response.getWriter(); 
       writer.println("<html>"); 
-      writer.println("<head><title>Insert Location</title></head>"); 
+      writer.println("<head><title>Insert Product</title></head>"); 
       writer.println("<body>"); 
-      writer.println("<h1>Insert Location!</h1>"); 
-      String lcountry = request.getParameter("locationcountry"); 
-      if((lcountry == null) || (lcountry.length() == 0)) 
+      writer.println("<h1>Insert Product!</h1>"); 
+      String pname = request.getParameter("productname"); 
+      if((pname == null) || (pname.length() == 0)) 
       { 
-        printMsg("Can not insert a location with no country!", writer, request); 
+        printMsg("Can not insert a product with no name!", writer, request); 
         return; 
       } 
-      String lcity = request.getParameter("locationcity"); 
-      if((lcity == null) || (lcity.length() == 0)) 
+      String ptype = request.getParameter("producttype"); 
+      if((ptype == null) || (ptype.length() == 0)) 
       { 
-        printMsg("Can not insert a location with no city!", writer, request); 
+        printMsg("Can not insert a product with no type!", writer, request); 
         return; 
       } 
-      String lstreet = request.getParameter("locationstreet"); 
-      if((lstreet == null) || (lstreet.length() == 0)) 
+      String pvalue = request.getParameter("productvalue"); 
+      if((pvalue == null) || (pvalue.length() == 0)) 
       { 
-        printMsg("Can not insert a location with no street!", writer, request);
+        printMsg("Can not insert a product with no value!", writer, request); 
         return; 
       } 
-      String lnumber = request.getParameter("locationnumber"); 
-      if((lnumber == null) || (lnumber.length() == 0)) 
-      { 
-        printMsg("Can not insert a location with no number!", writer, request);
-        return; 
-      } 
-      int inumber; 
+      int ivalue; 
       try 
       { 
-        inumber = Integer.parseInt(lnumber); 
+        ivalue = Integer.parseInt(pvalue); 
       } 
       catch(NumberFormatException exc) 
       { 
         exc.printStackTrace(); 
-        printMsg("Can not insert a location with an invalid Number!", writer, request); 
+        printMsg("Can not insert a product with an invalid Number!", writer, request); 
+        return; 
+      } 
+      String pprice = request.getParameter("productselling_price"); 
+      if((pprice == null) || (pprice.length() == 0)) 
+      { 
+        printMsg("Can not insert a product with no price!", writer, request); 
+        return; 
+      } 
+      int iprice; 
+      try 
+      { 
+        iprice = Integer.parseInt(pprice); 
+      } 
+      catch(NumberFormatException exc) 
+      { 
+        exc.printStackTrace(); 
+        printMsg("Can not insert a product with an invalid Number!", writer, request); 
         return; 
       } 
       try 
@@ -80,7 +91,7 @@ public class InsertLocation extends HttpServlet {
       catch(ClassNotFoundException exc) 
       { 
         exc.printStackTrace(); 
-        printMsg("Can not insert a movie : no JDBC driver found!", writer, request); 
+        printMsg("Can not insert a product : no JDBC driver found!", writer, request); 
         return; 
       } 
       try
@@ -88,15 +99,15 @@ public class InsertLocation extends HttpServlet {
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "root"); 
         Statement statement = connection.createStatement();
         //referential integrity gets checked here!!! 
-        String insert_sql_stmt = "INSERT INTO locations (country, city, street, number) VALUES('" + 
-        lcountry + "','" + lcity + "','" + lstreet + "','" + inumber + "')";
+        String insert_sql_stmt = "INSERT INTO products (name, type, value, selling_price) VALUES ('" + 
+        pname + "','" + ptype + "','" + ivalue + "','" + iprice + "')";
         statement.executeUpdate(insert_sql_stmt); 
         printMsg("Transaction inserted!", writer, request); 
       }  
       catch(SQLException exc) 
       { 
         exc.printStackTrace(); 
-        printMsg("Can not insert a location : database error!", writer, request); 
+        printMsg("Can not insert a product : database error!", writer, request); 
       } 
       writer.println("<body>"); 
       writer.println("</html>"); 
