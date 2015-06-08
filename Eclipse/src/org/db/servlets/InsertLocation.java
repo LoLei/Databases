@@ -38,35 +38,40 @@ public class InsertLocation extends HttpServlet {
       writer.println("<head><title>Insert Location</title></head>"); 
       writer.println("<body>"); 
       writer.println("<h1>Insert Location!</h1>"); 
-      String mname = request.getParameter("MName"); 
-      if((mname == null) || (mname.length() == 0)) 
+      String lcountry = request.getParameter("locationcountry"); 
+      if((lcountry == null) || (lcountry.length() == 0)) 
       { 
-        printMsg("Can not insert a movie with no name!", writer, request); 
+        printMsg("Can not insert a location with no country!", writer, request); 
         return; 
       } 
-      String mgenre = request.getParameter("MGenre"); 
-      if((mgenre == null) || (mgenre.length() == 0)) 
+      String lcity = request.getParameter("locationcity"); 
+      if((lcity == null) || (lcity.length() == 0)) 
       { 
-        printMsg("Can not insert a movie with no genre!", writer, request); 
+        printMsg("Can not insert a location with no city!", writer, request); 
         return; 
       } 
-      String director = request.getParameter("DId"); 
-      if((director == null) || (director.length() == 0)) 
+      String lstreet = request.getParameter("locationstreet"); 
+      if((lstreet == null) || (lstreet.length() == 0)) 
       { 
-        printMsg("Can not insert a movie with no director!", writer, request); 
+        printMsg("Can not insert a location with no street!", writer, request);
         return; 
       } 
-      int dId; 
+      String lnumber = request.getParameter("locationnumber"); 
+      if((lnumber == null) || (lnumber.length() == 0)) 
+      { 
+        printMsg("Can not insert a location with no number!", writer, request);
+        return; 
+      } 
+      int inumber; 
       try 
       { 
-        dId = Integer.parseInt(director); 
+        inumber = Integer.parseInt(lnumber); 
       } 
-      catch
-      (NumberFormatException exc) 
+      catch(NumberFormatException exc) 
       { 
         exc.printStackTrace(); 
-        printMsg("Can not insert a movie with an invalid Director!", writer, request); 
-      return; 
+        printMsg("Can not insert a movie with an invalid Number!", writer, request); 
+        return; 
       } 
       try 
       { 
@@ -81,23 +86,20 @@ public class InsertLocation extends HttpServlet {
       try
       { 
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "root"); 
+        writer.println("got connection");
         Statement statement = connection.createStatement();
         //referential integrity gets checked here!!! 
-        ResultSet result = statement.executeQuery("SELECT * FROM director WHERE DId=" + dId); 
-        if(!result.next()) 
-        { 
-          printMsg("Can not insert a movie : no such actor!", writer, request); 
-          return; 
-        } 
-        String insert_sql_stmt =  "INSERT INTO movie (MName, MGenre, DID) VALUES('" + mname + "','" + mgenre + "'," + dId + ")"; 
-        statement = connection.createStatement(); 
+        String insert_sql_stmt = "INSERT INTO locations (country, city, street, number) VALUES('" + 
+        lcountry + "','" + lcity + "','" + lstreet + "','" + inumber + "')";
+        printMsg("created statement!", writer, request); 
+        writer.println(insert_sql_stmt);
         statement.executeUpdate(insert_sql_stmt); 
         printMsg("Transaction inserted!", writer, request); 
       }  
       catch(SQLException exc) 
       { 
         exc.printStackTrace(); 
-        printMsg("Can not insert a movie : database error!", writer, request); 
+        printMsg("Can not insert a location : database error!", writer, request); 
       } 
       writer.println("<body>"); 
       writer.println("</html>"); 
