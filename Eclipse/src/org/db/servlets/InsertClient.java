@@ -38,35 +38,53 @@ public class InsertClient extends HttpServlet {
       writer.println("<head><title>Insert Client</title></head>"); 
       writer.println("<body>"); 
       writer.println("<h1>Insert Client!</h1>"); 
-      String mname = request.getParameter("MName"); 
-      if((mname == null) || (mname.length() == 0)) 
+      String c_last_name = request.getParameter("clientlast_name"); 
+      if((c_last_name == null) || (c_last_name.length() == 0)) 
       { 
-        printMsg("Can not insert a movie with no name!", writer, request); 
+        printMsg("Can not insert a Client with no last name!", writer, request); 
         return; 
       } 
-      String mgenre = request.getParameter("MGenre"); 
-      if((mgenre == null) || (mgenre.length() == 0)) 
+      String c_first_name = request.getParameter("clientfirst_name"); 
+      if((c_first_name == null) || (c_first_name.length() == 0)) 
       { 
-        printMsg("Can not insert a movie with no genre!", writer, request); 
+        printMsg("Can not insert a Client with first name", writer, request); 
         return; 
       } 
-      String director = request.getParameter("DId"); 
-      if((director == null) || (director.length() == 0)) 
+      String c_age = request.getParameter("clientage"); 
+      if((c_age == null) || (c_age.length() == 0)) 
       { 
-        printMsg("Can not insert a movie with no director!", writer, request); 
+        printMsg("Can not insert a Client with no age!", writer, request);
         return; 
       } 
-      int dId; 
+      int ic_age;
       try 
       { 
-        dId = Integer.parseInt(director); 
+    	 ic_age = Integer.parseInt(c_age); 
       } 
-      catch
-      (NumberFormatException exc) 
+      catch(NumberFormatException exc) 
       { 
         exc.printStackTrace(); 
-        printMsg("Can not insert a movie with an invalid Director!", writer, request); 
-      return; 
+        printMsg("Can not insert a client with an invalid Number!", writer, request); 
+        return; 
+      }
+      
+      
+      String cemployeeid = request.getParameter("clientemployeeid"); 
+      if((cemployeeid == null) || (cemployeeid.length() == 0)) 
+      { 
+        printMsg("Can not insert a Client with no number!", writer, request);
+        return; 
+      } 
+      int ic_employeeid; 
+      try 
+      { 
+    	  ic_employeeid = Integer.parseInt(cemployeeid); 
+      } 
+      catch(NumberFormatException exc) 
+      { 
+        exc.printStackTrace(); 
+        printMsg("Can not insert a Client with an invalid Number!", writer, request); 
+        return; 
       } 
       try 
       { 
@@ -75,29 +93,26 @@ public class InsertClient extends HttpServlet {
       catch(ClassNotFoundException exc) 
       { 
         exc.printStackTrace(); 
-        printMsg("Can not insert a movie : no JDBC driver found!", writer, request); 
+        printMsg("Can not insert a client : no JDBC driver found!", writer, request); 
         return; 
       } 
       try
       { 
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "root"); 
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "lo32"); 
+        //writer.println("got connection");
         Statement statement = connection.createStatement();
         //referential integrity gets checked here!!! 
-        ResultSet result = statement.executeQuery("SELECT * FROM director WHERE DId=" + dId); 
-        if(!result.next()) 
-        { 
-          printMsg("Can not insert a movie : no such actor!", writer, request); 
-          return; 
-        } 
-        String insert_sql_stmt =  "INSERT INTO movie (MName, MGenre, DID) VALUES('" + mname + "','" + mgenre + "'," + dId + ")"; 
-        statement = connection.createStatement(); 
+        String insert_sql_stmt = "INSERT INTO clients (last_name, first_name, age, employees_id) VALUES('" +
+        		c_last_name + "','" + c_first_name + "','" + ic_age + "','" + ic_employeeid + "')";
+        //printMsg("created statement!", writer, request); 
+        //writer.println(insert_sql_stmt);
         statement.executeUpdate(insert_sql_stmt); 
         printMsg("Transaction inserted!", writer, request); 
       }  
       catch(SQLException exc) 
       { 
         exc.printStackTrace(); 
-        printMsg("Can not insert a movie : database error!", writer, request); 
+        printMsg("Can not insert a Client : database error!", writer, request); 
       } 
       writer.println("<body>"); 
       writer.println("</html>"); 
