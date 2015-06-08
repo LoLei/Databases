@@ -33,13 +33,11 @@ public class InsertLocation extends HttpServlet {
    *      response)
    */
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    throws ServletException, IOException 
-    {
       PrintWriter writer = response.getWriter(); 
       writer.println("<html>"); 
-      writer.println("<head><title>Insert Movie</title></head>"); 
+      writer.println("<head><title>Insert Location</title></head>"); 
       writer.println("<body>"); 
-      writer.println(" <h1>Insert Movie!</h1>"); 
+      writer.println("<h1>Insert Location!</h1>"); 
       String mname = request.getParameter("MName"); 
       if((mname == null) || (mname.length() == 0)) 
       { 
